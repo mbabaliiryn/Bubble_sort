@@ -1,29 +1,26 @@
-# returns new array with the results
-numbers = [9, 1, 0, 56, 4, 6, 8]
-numbers.sort
-
-# using sort_by method
-numbers.sort_by(&:lenght)
-def sort_by_smallest_digit(num)
-  num.sort_by { |d| d[0].match(/[0-100]/) ? 0 : 1 }
+def bubble_sort(digit)
+  n = digit.length
+  loop do
+    swapped = false
+    (n - 1).times do |r|
+      if digit[r] > digit[r + 1]
+        digit[r], digit[r + 1] = digit[r + 1], digit[r]
+        swapped = true
+      end
+    end
+    break unless swapped
+  end
+  digit
 end
-sort_by_smallest_digit %w[9 1 0 56 4 6 8]
 
-def sort_by(digit)
-    return digit if digit.size <= 1 
+def merge(left, right)
+  if left.empty?
+    right
+  elsif right.empty?
+    left
+  elsif left[0] < right[0]
+    [left[0]] + merge(left[1..left.length], right)
+  else
+    [right[0]] + merge(left, right[1..right.length])
+  end
 end
-
-# implementing the yield method
-def sort_digits
-  yield '0'
-  yield '1'
-  yield '4'
-  yield '6'
-  yield '8'
-  yield '9'
-  yield '56'
-end
-sort_digits { |number| puts number.to_s }
-
-# using the spaceship operator
-[9, 1, 0, 56, 4, 6, 8].sort { |x, y| x <=> y }
