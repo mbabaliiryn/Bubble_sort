@@ -13,14 +13,16 @@ def bubble_sort(digit)
   digit
 end
 
-def merge(left, right)
-  if left.empty?
-    right
-  elsif right.empty?
-    left
-  elsif left[0] < right[0]
-    [left[0]] + merge(left[1..left.length], right)
-  else
-    [right[0]] + merge(left, right[1..right.length])
+def bubble_sort_by(array)
+  x = 0
+  loop do
+    array[x], array[x + 1] = array[x + 1], array[x] if yield(array[x], array[x + 1]).positive?
+    x += 1
+    break if x >= array.length - 1
   end
+  print array
+end
+
+bubble_sort_by(%w[hi hello hey kiss]) do |left, right|
+  left.length - right.length
 end

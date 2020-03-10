@@ -10,9 +10,9 @@ Bubble sort algorithm.
 
 - The code has been tested using the following test cases:
 
-* `bubble_sort(35, 15, 61, 453, 84)`
-* `bubble_sort_by(["hi","hello","hey"]) {|i, j| i.length - j.length}`
-* `bubble_sort(18, 24, 2, 93, 16)`
+* `bubble_sort([35, 15, 61, 453, 84])`
+* `bubble_sort_by(%w[hi hello hey kiss]) do |left, right| left.length - right.length end`
+* `bubble_sort([18, 24, 2, 93, 16])`
 
 
 ## Authors
@@ -22,6 +22,13 @@ Bubble sort algorithm.
 - Github: [@mbabaliiryn](https://github.com/mbabaliiryn)
 - Twitter: [@IrynMbabali](https://twitter.com/IrynMbabali)
 - Linkedin: [Mbabali iryn](https://www.linkedin.com/feed/)
+
+👤 **Kelly Booster**
+
+- Github: [@kelibst](https://github.com/kelibst)
+- Twitter: [@keli_booster](https://twitter.com/keli_booster)
+- Linkedin: [Kekeli (Jiresse) Dogbevi
+](https://www.linkedin.com/in/kekeli-dogbevi-958272108/)
 
 
 ## 🤝 Contributing
