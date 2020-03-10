@@ -9,6 +9,10 @@ def sort_by_smallest_digit(num)
 end
 sort_by_smallest_digit %w[9 1 0 56 4 6 8]
 
+def sort_by(digit)
+    return digit if digit.size <= 1 
+end
+
 # implementing the yield method
 def sort_digits
   yield '0'
