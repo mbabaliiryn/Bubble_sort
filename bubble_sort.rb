@@ -14,15 +14,20 @@ def bubble_sort(digit)
 end
 
 def bubble_sort_by(array)
-  x = 0
   loop do
-    array[x], array[x + 1] = array[x + 1], array[x] if yield(array[x], array[x + 1]).positive?
-    x += 1
-    break if x >= array.length - 1
+    swapped = false
+    (array.length - 1).times do |x|
+      if yield(array[x], array[x + 1]).positive?
+        array[x], array[x + 1] = array[x + 1], array[x]
+        swapped = true
+      end
+    end
+    break unless swapped
   end
+
   print array
 end
 
-bubble_sort_by(%w[hi hello hey kiss]) do |left, right|
+bubble_sort_by(%w[Hi hey kiss bubble dance love]) do |left, right|
   left.length - right.length
 end
