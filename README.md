@@ -11,7 +11,7 @@ Bubble sort algorithm.
 - The code has been tested using the following test cases:
 
 * `bubble_sort([35, 15, 61, 453, 84])`
-* `bubble_sort_by(%w[hi hello hey kiss]) do |left, right| left.length - right.length end`
+* `bubble_sort_by(%w[Hi hey kiss bubble dance love]) do |left, right| left.length - right.length end`
 * `bubble_sort([18, 24, 2, 93, 16])`
 
 
