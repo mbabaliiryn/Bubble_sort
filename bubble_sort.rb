@@ -25,7 +25,7 @@ def bubble_sort_by(array)
     break unless swapped
   end
 
-  return array
+   array
 end
 
 bubble_sort_by(%w[Hi hey kiss bubble dance love]) do |left, right|
